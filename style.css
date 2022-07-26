@@ -517,6 +517,11 @@ option {
   margin-left: auto;
   display: flex;
   align-items: center;
+  background-size: contain;
+}
+.about_us_box{
+  display: flex;
+  align-items: center;
 }
 
 .new_title_box {
@@ -533,8 +538,10 @@ option {
   background-color: white;
   border-radius: 0px 3px 3px 0px;
   border-right: 15px #44c697 solid;
-  margin-left: auto;
-  right: 1129px;
+  /* margin-left: auto; */
+  /* left: 278px; */
+  /* display: none; */
+  position: absolute;
 }
 .about_us_info_text > p {
   margin-top: 15px;
