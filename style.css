@@ -567,6 +567,11 @@ option {
   display: flex;
   align-items: center;
 }
+.box_of_questions_wrapper{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
 .box_of_questions_img_form {
   border-radius: 0px 3px 3px 0px;
   border-left: 15px #44c697 solid;
@@ -577,8 +582,10 @@ option {
   height: 457px;
   background-color: white;
   justify-content: center;
-  position: relative;
-  left: 1392px;
+
+  position: absolute;
+  right: 0;
+
 }
 .box_of_questions_img_form > h1 {
   font-weight: 700;
