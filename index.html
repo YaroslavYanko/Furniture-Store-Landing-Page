@@ -5,24 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Furniture Store</title>
   </head>
   <body>
     <div class="containar">
-      <nav class="main_menu">
+      <div class="mobile__menu">
+       
+        <ul class="main_menu_list__mobile">
+          <li class="main_menu_list_item"><a href="#main_menu">ГОЛОВНА</a></li>
+          <li class="main_menu_list_item"><a href="#categories">АКЦІЇ</a></li>
+          <li class="main_menu_list_item">
+            <a href="#preference_slider">ДОСТАВКА ТА ОПЛАТА</a>
+          </li>
+          <li class="main_menu_list_item"><a href="#about_us">ПРО НАС</a></li>
+          <li class="main_menu_list_item"><a href="#contacts">КОНТАКТИ</a></li>
+        </ul>
+        <img class="mobile__menu_btn_close" src="./img/close.png" alt="btn_close_menu">
+      </div>
+
+      <nav id="main_menu" class="main_menu">
+        <img class="main_menu__mobile_bar" src="./img/menu-bar.png" alt="menu-bar">
         <ul class="main_menu_info">
           <li class="main_menu_info_item">Ми в соціальних мережах:</li>
           <li class="main_menu_info_item">
-            <img src="./img/telegram.png" alt="telegram" />
+            <a href="#"> <img src="./img/telegram.png" alt="telegram" /></a>
           </li>
           <li class="main_menu_info_item">
-            <img src="./img/Path.png" alt="Path" />
+            <a href="#"> <img src="./img/Path.png" alt="Path" /></a>
           </li>
           <li class="main_menu_info_item">
-            <img src="./img/Union.png" alt="Union" />
+            <a href="#"> <img src="./img/Union.png" alt="Union" /></a>
           </li>
           <li class="main_menu_info_item">
-            <img src="./img/smartphone 1.png" alt="smartphone" />
+            <a href="#">
+              <img src="./img/smartphone 1.png" alt="smartphone"
+            /></a>
           </li>
           <li class="main_menu_info_item">
             <select name="telephone">
@@ -35,13 +52,13 @@
         </ul>
 
         <ul class="main_menu_list">
-          <li class="main_menu_list_item"><a href="#">ГОЛОВНА</a></li>
-          <li class="main_menu_list_item"><a href="#">АКЦІЇ</a></li>
+          <li class="main_menu_list_item"><a href="#main_menu">ГОЛОВНА</a></li>
+          <li class="main_menu_list_item"><a href="#categories">АКЦІЇ</a></li>
           <li class="main_menu_list_item">
-            <a href="#">ДОСТАВКА ТА ОПЛАТА</a>
+            <a href="#preference_slider">ДОСТАВКА ТА ОПЛАТА</a>
           </li>
-          <li class="main_menu_list_item"><a href="#">ПРО НАС</a></li>
-          <li class="main_menu_list_item"><a href="#">КОНТАКТИ</a></li>
+          <li class="main_menu_list_item"><a href="#about_us">ПРО НАС</a></li>
+          <li class="main_menu_list_item"><a href="#contacts">КОНТАКТИ</a></li>
         </ul>
       </nav>
       <hr />
@@ -78,17 +95,21 @@
               <option value="кухня">Кухня</option>
             </select>
           </li>
+        </nav>
+
+        <div class="second_menu_basket">
           <div class="second_menu_logo">
             <img src="./img/Group.png" alt="Group" />
             <h1>Furniture.test</h1>
           </div>
-        </nav>
-
-        <div class="second_menu_basket">
-          <img src="./img/shopping-cart 1.png" alt="shopping-cart" />
-          <h3>КОШИК</h3>
+          <div class="basket">
+            <div class="basket_img">
+              <img src="./img/shopping-cart 1.png" alt="shopping-cart" />
+              <h3>КОШИК</h3>
+            </div>
+            <button class="second_menu_btn">Замовити дзвінок</button>
+          </div>
         </div>
-        <button class="second_menu_btn">Замовити дзвінок</button>
       </div>
 
       <div class="main_photo">
@@ -111,15 +132,18 @@
         </div>
       </div>
 
-      <div class="preference_slider">
+      <div id="preference_slider" class="preference_slider">
         <div class="new_title">
           <h1 class="new_title_text">Наші переваги</h1>
         </div>
+        <div class="slider_btn__wrapper">
+          <button class="slider__btn preference_slider_arrow--left"><</button>
+          <button class="slider__btn preference_slider_arrow--right">></button>
+        </div>
 
         <div class="preference_slider_box_img">
-          <button class="slider__btn preference_slider_arrow--left">
-            <img src="./img/Arrow Left2.png" alt="Arrow Left" />
-          </button>
+          <!-- <div class="preference_slider__wraper"></div> -->
+          <div></div>
           <div class="preference_slider_img">
             <h1>Меблі преміум класу</h1>
           </div>
@@ -129,13 +153,11 @@
           <div class="preference_slider_img">
             <h1>Безкоштовна доставка</h1>
           </div>
-          <button class="slider__btn preference_slider_arrow--right btn_active">
-            <img src="./img/Arrow Right2.png" alt="Arrow Right" />
-          </button>
+          <div></div>
         </div>
       </div>
 
-      <div class="categories">
+      <div id="categories" class="categories">
         <div class="new_title">
           <h1 class="new_title_text">Категорії товарів</h1>
         </div>
@@ -169,112 +191,106 @@
         <div class="categories_box_img">
           <div class="categories_box_block">
             <div class="categories_box_img_bad">
+              <div class="categories_box_block_info">
+                <h3>Ліжко Імперія</h3>
+                <div class="categories_box_block_price">
+                  <h3>8 999 грн</h3>
+                </div>
+              </div>
               <div class="categories_box_img_news">
                 <span class="nova">НОВИНКА</span>
-              </div>
-            </div>
-            <div class="categories_box_block_info">
-              <h3>Ліжко Імперія</h3>
-              <div class="categories_box_block_price">
-                <h3>8 999 грн</h3>
               </div>
             </div>
           </div>
           <div class="categories_box_block">
             <div class="categories_box_img_bad">
+              <div class="categories_box_block_info">
+                <h3>Ліжко Імперія</h3>
+                <div class="categories_box_block_price">
+                  <h3 class="discount">8 999 грн</h3>
+                  <p>8 999 грн</p>
+                </div>
+              </div>
               <div class="categories_box_img_news">
                 <span class="hit_sales">ХІТ ПРОДАЖ</span>
                 <span class="promotional_price">АКЦІЯ</span>
               </div>
             </div>
-            <div class="categories_box_block_info">
-              <h3>Ліжко Імперія</h3>
-              <div class="categories_box_block_price">
-                <h3 class="discount">8 999 грн</h3>
-                <p>8 999 грн</p>
-              </div>
-            </div>
           </div>
           <div class="categories_box_block">
-            <div class="categories_box_img_bad"></div>
-            <div class="categories_box_block_info">
-              <h3>Ліжко Імперія</h3>
-              <div class="categories_box_block_price">
-                <h3>8 999 грн</h3>
+            <div class="categories_box_img_bad">
+              <div class="categories_box_block_info">
+                <h3>Ліжко Імперія</h3>
+                <div class="categories_box_block_price">
+                  <h3>8 999 грн</h3>
+                </div>
               </div>
             </div>
           </div>
           <div class="categories_box_block">
             <div class="categories_box_img_bad">
+              <div class="categories_box_block_info">
+                <h3>Ліжко Імперія</h3>
+                <div class="categories_box_block_price">
+                  <h3>8 999 грн</h3>
+                </div>
+              </div>
               <div class="categories_box_img_news">
                 <span class="nova">НОВИНКА</span>
               </div>
             </div>
-            <div class="categories_box_block_info">
-              <h3>Ліжко Імперія</h3>
-              <div class="categories_box_block_price">
-                <h3>8 999 грн</h3>
-              </div>
-            </div>
           </div>
           <div class="categories_box_block">
-            <div class="categories_box_img_bad"></div>
-            <div class="categories_box_block_info">
-              <h3>Ліжко Імперія</h3>
-              <div class="categories_box_block_price">
-                <h3>8 999 грн</h3>
+            <div class="categories_box_img_bad">
+              <div class="categories_box_block_info">
+                <h3>Ліжко Імперія</h3>
+                <div class="categories_box_block_price">
+                  <h3>8 999 грн</h3>
+                </div>
               </div>
             </div>
           </div>
           <div class="categories_box_block">
             <div class="categories_box_img_bad">
+              <div class="categories_box_block_info">
+                <h3>Ліжко Атлант</h3>
+                <div class="categories_box_block_price">
+                  <h3 class="discount">8 999 грн</h3>
+                  <p>8 999 грн</p>
+                </div>
+              </div>
               <div class="categories_box_img_news">
                 <span class="hit_sales">ХІТ ПРОДАЖ</span>
                 <span class="promotional_price">АКЦІЯ</span>
-              </div>
-            </div>
-
-            <div class="categories_box_block_info">
-              <h3>Ліжко Атлант</h3>
-              <div class="categories_box_block_price">
-                <h3 class="discount">8 999 грн</h3>
-                <p>8 999 грн</p>
               </div>
             </div>
           </div>
         </div>
         <button class="btn_catalog"><a href="#">В КАТАЛОГ</a></button>
-
-
-
-   
-
-    
       </div>
-        
-      <div class="about_us">
+
+      <div id="about_us" class="about_us">
         <div class="new_title_box">
           <h1 class="new_title_text">Про нас</h1>
         </div>
         <div class="about_us_box">
-
           <div class="about_us_info_text">
             <p>
               <span>"Furniture"</span> – "Lorem ipsum dolor sit amet,
               consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
               labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-              nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat. Duis aute irure dolor in reprehenderit in
-              voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa
-              qui officia deserunt mollit anim id est laborum."
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+              occaecat cupidatat non proident, sunt in culpa qui officia
+              deserunt mollit anim id est laborum."
             </p>
             <p>
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-              in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum."
             </p>
@@ -285,68 +301,42 @@
               nisi ut aliquip ex ea commodo consequat. Duis aute irure
             </p>
           </div>
-          <div class="about_us_info">
-
-        </div>
-     
-
+          <div class="about_us_info"></div>
         </div>
       </div>
-
-
-
-
-
 
       <div class="box_of_questions">
         <div class="new_title_box">
           <h1 class="new_title_text">Залишились питання?</h1>
         </div>
-     <div class="box_of_questions_wrapper">
+        <div class="box_of_questions_wrapper">
+          <div class="box_of_questions_img"></div>
 
+          <div class="box_of_questions_img_form">
+            <h1>Замовте консультацію</h1>
+            <form class="box_of_questions_form" action="#">
+              <input type="text" name="username" value="" placeholder="Ім'я" />
+              <input type="tel" name="phone" placeholder="Номер телефону" />
+              <button type="submit">ВІдправити</button>
 
-
-
-   
-
-
-
-      <div class="box_of_questions_img">
-      
-      </div>
-
-      <div class="box_of_questions_img_form">
-        <h1>Замовте консультацію</h1>
-        <form class="box_of_questions_form" action="#">
-          <input
-            type="text"
-            name="username"
-            value=""
-            placeholder="Ім'я"
-          />
-          <input type="tel" name="phone" placeholder="Номер телефону" />
-          <button type="submit">ВІдправити</button>
-
-          <div class="box_of_questions_info">
-            <p>
-              Залиште заявку або телефонуйте за номером
-              <span>(099) 111 22 33</span>, і наш менеджер звяжеться з
-              вами для кваліфікованої консультації.
-            </p>
+              <div class="box_of_questions_info">
+                <p>
+                  Залиште заявку або телефонуйте за номером
+                  <span>(099) 111 22 33</span>, і наш менеджер звяжеться з вами
+                  для кваліфікованої консультації.
+                </p>
+              </div>
+            </form>
           </div>
-        </form>
-      </div>
-   
-     </div>
-  
-        
+        </div>
       </div>
 
-      <div class="footer">
+      <div id="contacts" class="footer">
         <div class="footer_info">
-          <button class="btn_footer">
-            <img src="./img/Arrow 3.png" alt="Arrow 3" />
-          </button>
+          <a href="#main_menu" class="btn_footer">
+            <img src="./img/Arrow 3.png" alt="Arrow 3"
+          /></a>
+
           <div class="footer_info_log">
             <div class="second_menu_logo logo_footer">
               <img src="./img/logo_footer.png" alt="logo_footer" />
@@ -357,17 +347,13 @@
             <div class="footer_menu">
               <ul>
                 <li>
-                  <a class="foote_menu_item" href="#"
-                    ><span>—</span> Дивани</a
-                  >
+                  <a class="foote_menu_item" href="#"><span>—</span> Дивани</a>
                 </li>
                 <li>
                   <a class="foote_menu_item" href="#"><span>—</span> ліжка</a>
                 </li>
                 <li>
-                  <a class="foote_menu_item" href="#"
-                    ><span>—</span> Крісла</a
-                  >
+                  <a class="foote_menu_item" href="#"><span>—</span> Крісла</a>
                 </li>
                 <li>
                   <a class="foote_menu_item" href="#"><span>—</span> шафи</a>
@@ -376,9 +362,7 @@
                   <a class="foote_menu_item" href="#"><span>—</span> Кухні</a>
                 </li>
                 <li>
-                  <a class="foote_menu_item" href="#"
-                    ><span>—</span> комоди</a
-                  >
+                  <a class="foote_menu_item" href="#"><span>—</span> комоди</a>
                 </li>
                 <li>
                   <a class="foote_menu_item" href="#"><span>—</span> АкцІї</a>
@@ -389,9 +373,7 @@
                   >
                 </li>
                 <li>
-                  <a class="foote_menu_item" href="#"
-                    ><span>—</span> про нас</a
-                  >
+                  <a class="foote_menu_item" href="#"><span>—</span> про нас</a>
                 </li>
                 <li>
                   <a class="foote_menu_item" href="#"
@@ -406,15 +388,11 @@
                 <h4>TEST</h4>
               </div>
               <div class="footer_contacts_work_schedule">
-                <img src="./img/Vector2.png" alt="Vector2" />
+                <img id="data_work" src="./img/Vector2.png" alt="Vector2" />
                 <h4>Пн-Пт, з 10 до 18</h4>
               </div>
               <div>
-                <img
-                  id="smartfon"
-                  src="./img/smartphone 2.png"
-                  alt="Vector3"
-                />
+                <img id="smartfon" src="./img/smartphone 2.png" alt="Vector3" />
                 <div class="footer_contacts_phone">
                   <a href="tel:099 111 22 33">(099) 111 22 33</a>
                   <a href="tel:099 222 33 44">(099) 222 33 44</a>
@@ -439,14 +417,13 @@
           <div class="footer_deweloper_company">
             <h4>© ТОВ Furniture, працюємо з 2006 року</h4>
             <div class="footer_deweloper_company_logo">
-              <img src="./img/dewloperlogo.png" alt="dewloperlogo">
+              <img src="./img/dewloperlogo.png" alt="dewloperlogo" />
               <h4>Глянець — розробка інтернет-магазинів</h4>
             </div>
           </div>
         </div>
         <div class="footer_img"></div>
       </div>
-
     </div>
   </body>
 </html>
